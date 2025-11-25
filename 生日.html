@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生日快乐</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            width: 100%;
+            min-height: 100vh;
+            background: url("http://image.aibochinese.com/i/2025/11/24/xa0sa1.jpg") center/cover no-repeat fixed !important;
+            font-family: "Microsoft YaHei", "楷体", serif;
+            color: #e0e7ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card {
+            background: rgba(15, 23, 42, 0.7);
+            padding: 60px 40px;
+            border-radius: 24px;
+            backdrop-filter: blur(8px);
+            text-align: center;
+            max-width: 650px;
+            width: 90%;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(96, 165, 250, 0.15);
+        }
+        .card-title {
+            font-size: 48px;
+            margin-bottom: 40px;
+            letter-spacing: 3px;
+            text-shadow: 0 2px 8px rgba(59, 130, 246, 0.2);
+        }
+        .wish-text {
+            font-size: 18px;
+            line-height: 2.5;
+            margin-bottom: 40px;
+        }
+        .music-btn {
+            padding: 12px 24px;
+            background: rgba(96, 165, 250, 0.5);
+            border: 1px solid #60a5fa;
+            color: #e0e7ff;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .music-btn:hover {
+            background: rgba(96, 165, 250, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1 class="card-title">生日快乐</h1>
+        <p class="wish-text">
+            又一年岁序更迭<br>
+            愿你在往后的日子里<br>
+            事事顺心、万事如意<br>
+            我知道可能未来没有我陪在身旁<br>
+            但我还是希望我最爱的女孩能够永远的开心下去<br>
+            那些未说出口的遗憾<br>
+            都化作往后的温柔铺垫<br>
+            愿你有人心疼，有人偏爱<br>
+            即使独行，也有星光相伴
+        </p>
+        <button class="music-btn" onclick="playPauseMusic()">播放背景音乐</button>
+    </div>
+
+    <audio id="bgMusic" loop>
+        <!-- 已帮你插入音乐链接 -->
+        <source src="https://bc6.afbza.cn/mqrcode/1777647/1763990653_1021301621_颜人中-嗜好.mp3" type="audio/mpeg">
+        你的浏览器不支持音频播放
+    </audio>
+
+    <script>
+        let music = document.getElementById("bgMusic");
+        function playPauseMusic() {
+            if (music.paused) {
+                music.play();
+                event.target.textContent = "暂停背景音乐";
+            } else {
+                music.pause();
+                event.target.textContent = "播放背景音乐";
+            }
+        }
+    </script>
+</body>
+</html>
